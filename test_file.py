@@ -1,4 +1,4 @@
-import binary_search
+import functions
 
 
 # # testing the sorted() function
@@ -28,6 +28,6 @@ import binary_search
 nums = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 words = ["a", "b", "c", "d", "e"]
 
-print(binary_search.binSearch(nums, 0))
+print(functions.binSearch(nums, 0))
 
-print(binary_search.binSearch(words, "d"))
+print(functions.binSearch(words, "d"))
