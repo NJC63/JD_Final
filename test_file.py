@@ -1,5 +1,7 @@
 import functions
 
+import pandas as pd
+
 
 # # testing the sorted() function
 # list = ["a", "c", "z", "p", "d", "b", "o", "i", "q", "t", "g", "s", "r", "u", "j", "k", "v", "e", "f", "w", "x", "n", "y", "l", "h", "m"]
@@ -31,3 +33,11 @@ words = ["a", "b", "c", "d", "e"]
 print(functions.binSearch(nums, 0))
 
 print(functions.binSearch(words, "d"))
+
+
+
+# testing working with csv files
+file = pd.read_csv("cities.csv")
+headers = file.columns
+
+print(headers)

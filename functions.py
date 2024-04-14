@@ -13,4 +13,6 @@ def binSearch(sorted_list, target):
             min = midpt + 1
     return -1   
 
+
+
     
