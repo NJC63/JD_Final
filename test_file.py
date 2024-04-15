@@ -27,17 +27,30 @@ import pandas as pd
 
 
 # testing binsearch
-nums = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-words = ["a", "b", "c", "d", "e"]
+# nums = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+# words = ["a", "b", "c", "d", "e"]
 
-print(functions.binSearch(nums, 0))
+# print(functions.binSearch(nums, 0))
 
-print(functions.binSearch(words, "d"))
+# print(functions.binSearch(words, "d"))
 
 
 
 # testing working with csv files
-file = pd.read_csv("cities.csv")
-headers = file.columns
+df = pd.read_csv("cities.csv", header=0)
+
+headers = df.columns.to_list
 
 print(headers)
+
+
+print(df[df['city'] == "Pittsburgh"])
+
+
+
+# testing .lower() function
+string = "DOG Dog dOg"
+print(string.lower())
+
+
+

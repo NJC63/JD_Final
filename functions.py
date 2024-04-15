@@ -1,4 +1,4 @@
-def binSearch(sorted_list, target):
+def binarySearch(sorted_list, target):
     min = 0
     max = len(sorted_list) - 1
 
