@@ -1,3 +1,5 @@
+import pandas as pd
+
 def binarySearch(sorted_list, target):
     min = 0
     max = len(sorted_list) - 1
@@ -14,5 +16,10 @@ def binarySearch(sorted_list, target):
     return -1   
 
 
+def clean(raw_df):
 
+    column_names = raw_df.columns.values.tolist()
+
+
+    return 1
     

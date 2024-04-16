@@ -37,20 +37,79 @@ import pandas as pd
 
 
 # testing working with csv files
+
+
+# Making all of the string columns lowercase
 df = pd.read_csv("cities.csv", header=0)
+df["city"] = df["city"].str.lower()
+df["st"] = df["st"].str.lower()
+df["state"] = df["state"].str.lower()
+df["county"] = df["county"].str.lower()
 
-headers = df.columns.to_list
+print(df.head(10))
 
-print(headers)
+# Convert the column names into a list
+column_names = df.columns.values.tolist()
+
+# print(column_names)
+# print(column_names[0])
+
+pittRow = df[df[column_names[0]] == "pittsburgh"]
+
+lat = pittRow["lat"]
+
+'''
+print(pittRow)
+print(lat)
 
 
-print(df[df['city'] == "Pittsburgh"])
+city = "Abbeville"
+formatted_city = city.lower()
+row = df[(df["state"] == "alabama") & (df["city"] == formatted_city)]
+zip = row["zip"]
+
+print(zip)
+
+'''
+
+
+# splitting using the ','
+'''
+city = "alabaster"
+formatted_city = city.lower()
+row = df[(df["state"] == "alabama") & (df["city"] == formatted_city)]
+zip = row["zip"]
+
+cleaned_zip = zip.str.split(",").tolist()
+
+print(zip)
+print(cleaned_zip[0][0])
+
+'''
+
+
+city = "Pittsburgh"
+state = "Pennsylvania"
+formatted_city = city.lower()
+formatted_state = state.lower()
+row = df[(df["state"] == formatted_state) & (df["city"] == formatted_city)]
+zip = row["zip"]
+
+cleaned_zip = zip.str.split("-").tolist()
+
+print(zip)
+print(cleaned_zip[0][0])
+
+
+
+
 
 
 
 # testing .lower() function
+'''
 string = "DOG Dog dOg"
 print(string.lower())
-
+'''
 
 
