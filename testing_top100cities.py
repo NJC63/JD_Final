@@ -9,26 +9,45 @@ df["state"] = df["state"].str.lower()
 city = input("Please enter your city:").lower()
 
 
+
 row_for_city = df[df["city"] == city]
-
+state = row_for_city["state"]
 population = row_for_city["population_2020"]
+largestCityInState = row_for_city["largest_city_in_state"]
+stateCapital = row_for_city["state_capital"]
+federalCapital = row_for_city["federal_capital"]
 
+
+
+
+# Checking for if the value is in the top 100 most populous cities
 val = df["city"] == city
 
+inTop100 = False
+location = -1
 i = 1
-
 while (i <= 100):
     if(val[i] == True):
-        print(val[i])
+        inTop100 = True
+        location = i
     i = i + 1
 
 
 
+if(inTop100):
 
-# if(df.isin([city]).any().any()):
+    city = city.title()
 
-#     print("Your city is in the top 100 most populous cities in the United States.")
-#     print("According to the 2020 census " + city + " has " + str(population[1]) + " people")
+    print("Your city is in the top 100 most populous cities within the United States.")
+    print("According to the 2020 census " + city + " has " + str(population[location]) + " people.")
+
+    print(city + " is ranked as the number " + str(location) + " most populous city within the U.S.")
+
+    if(largestCityInState[location] == True): print(city + " is the largest city within " + state[location].title() + ".")
+    if(stateCapital[location] == True): print(city + " is the state capital in " + state[location].title() + ".")
+    if(federalCapital[location] == True): print(city + " is the federal capital.")
+    
+    
 
 
 
