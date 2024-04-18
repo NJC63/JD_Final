@@ -25,7 +25,8 @@ def clean(raw_df):
     
 def zipsInOrder(zip):
     zip = str(zip)
-    zip.rsplit("-")
+    original_list = zip.rsplit("-")
+    print(original_list)
     initial = original_list[0][0]
     final = original_list[0][1]
 
@@ -33,7 +34,7 @@ def zipsInOrder(zip):
     i = 1
     final_list = [initial, final]
     while(count < final):
-        count = count + 1
+        count = str(int(count) + 1)
         final_list.insert(i, count)
         return final_list
     return zip

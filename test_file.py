@@ -100,7 +100,7 @@ print(zip)
 
 test = "14"
 
-final_zip_list = functions.zipsInOrder(test)
+final_zip_list = functions.zipsInOrder(zip)
 
     
 
