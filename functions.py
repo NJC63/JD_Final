@@ -23,3 +23,19 @@ def clean(raw_df):
 
     return 1
     
+def zipsInOrder(zip):
+    zip = str(zip)
+    zip.rsplit("-")
+    initial = original_list[0][0]
+    final = original_list[0][1]
+
+    count = initial
+    i = 1
+    final_list = [initial, final]
+    while(count < final):
+        count = count + 1
+        final_list.insert(i, count)
+        return final_list
+    return zip
+    
+

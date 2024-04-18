@@ -95,10 +95,21 @@ formatted_state = state.lower()
 row = df[(df["state"] == formatted_state) & (df["city"] == formatted_city)]
 zip = row["zip"]
 
-cleaned_zip = zip.str.split("-").tolist()
-
 print(zip)
-print(cleaned_zip[0][0])
+
+
+test = "14"
+
+final_zip_list = functions.zipsInOrder(test)
+
+    
+
+# cleaned_zip = zip.str.split("-").tolist()
+
+# print(zip)
+# print(cleaned_zip[0][0])
+
+print(final_zip_list)
 
 
 
