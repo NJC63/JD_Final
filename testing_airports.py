@@ -20,7 +20,7 @@ val = df["CITY"] == city
 inAirports = False
 location = -1
 i = 1
-while (i <= 100):
+while (i <= 343):
     if(val[i] == True):
         inAirports = True
         location = i
