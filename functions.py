@@ -1,27 +1,5 @@
 import pandas as pd
 
-def binarySearch(sorted_list, target):
-    min = 0
-    max = len(sorted_list) - 1
-
-    while(min <= max):
-        midpt = (min + max)//2
-
-        if(sorted_list[midpt] == target):
-            return midpt
-        elif(sorted_list[midpt] > target):
-            max = midpt - 1
-        elif(sorted_list[midpt] < target):
-            min = midpt + 1
-    return -1   
-
-
-def clean(raw_df):
-
-    column_names = raw_df.columns.values.tolist()
-
-
-    return 1
 
 def cities(city):
     df = pd.read_csv("cities.csv")
@@ -32,10 +10,10 @@ def cities(city):
 
     row_for_city = df[df["city"] == city]
 
-    st = row_for_city["st"]
-    state = row_for_city["state"]
-    county = row_for_city["county"]
-    zip = row_for_city["zip"]
+    st_index = row_for_city["st"]
+    state_index = row_for_city["state"]
+    county_index = row_for_city["county"]
+    zip_index = row_for_city["zip"]
 
     val = df["city"] == city
     inCities = False
@@ -47,13 +25,22 @@ def cities(city):
             inCities = True
             location = i
         i += 1
+    
+
+    st = str(st_index[location]).upper()
+    state = str(state_index[location]).title()
+    county = str(county_index[location]).title()
+    zip = str(zip_index[location])
 
     if(inCities):
-        print(city.title() + " is in the state " + str(state[location]).title() + " with initials " + str(st[location]).upper() + ".")
-        print("County for " + city.title() + " is " + str(county[location]).title() + " County .")
-        print("Zip for " + city.title() + " is " + str(zip[location]) + ".")
+        print(city.title() + " is in the state " + state + " with initials " + st + ".")
+        print("County for " + city.title() + " is " + county + " County .")
+        print("Zip for " + city.title() + " is " + zip + ".")
     else:
         print("Your city could not be found.")
+    
+
+    return st.lower(), state.lower(), county.lower(), zip.lower()
 
 
 
@@ -98,19 +85,17 @@ def top100cities(city):
         if(federalCapital[location] == True): print(city + " is the federal capital.")
 
 
+
 def airports(city):
     df = pd.read_csv("airports.csv")
 
     df["CITY"] = df["CITY"].str.lower()
     df["STATE"] = df["STATE"].str.lower()
-    df["COUNTRY"] = df["COUNTRY"].str.lower()
 
     row_for_city = df[df["CITY"] == city]
 
     airport = row_for_city["AIRPORT"]
     iata = row_for_city["IATA"]
-
-
 
     val = df["CITY"] == city
     inAirports = False
@@ -122,9 +107,7 @@ def airports(city):
             location = i
         i = i + 1
 
-
     if(inAirports):
-
         print("The main airport for " + city.title() + " is " + str(airport[location]) + " Airport.")
         print("The IATA code for " + str(airport[location]) + " is " + str(iata[location]) + ".")
 
@@ -147,6 +130,7 @@ def airports(city):
 
 
 
+# ------------------ Potentially useful ------------------ #
 
 
 
@@ -168,3 +152,24 @@ def zipsInOrder(zip):
     return zip
     
 
+def binarySearch(sorted_list, target):
+    min = 0
+    max = len(sorted_list) - 1
+
+    while(min <= max):
+        midpt = (min + max)//2
+
+        if(sorted_list[midpt] == target):
+            return midpt
+        elif(sorted_list[midpt] > target):
+            max = midpt - 1
+        elif(sorted_list[midpt] < target):
+            min = midpt + 1
+    return -1   
+
+def clean(raw_df):
+
+    column_names = raw_df.columns.values.tolist()
+
+
+    return 1
