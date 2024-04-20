@@ -23,12 +23,12 @@ inCities = False
 location = -1
 i = 1
 
-# WEIRD ERROR WITH VALUES PAST 19502. NEEDS ADDRESSED TO ACCOUNT FOR THE REST OF THE DATASET
+
 while (i <= 19501):
     if(val[i] == True):
         inCities = True
         location = i
-    i = i + 1
+    i += 1
 
 
 
