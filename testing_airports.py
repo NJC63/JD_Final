@@ -29,5 +29,5 @@ while (i <= 340):
 
 if(inAirports):
 
-    print("The main airport for " + city.title() + " is " + str(airport[location]) + ".")
+    print("The main airport for " + city.title() + " is " + str(airport[location]) + " Airport.")
     print("The IATA code for " + str(airport[location]) + " is " + str(iata[location]) + ".")

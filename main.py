@@ -1,10 +1,17 @@
 import pandas as pd
-import numpy as np
+
+import functions as fn
 
 
-location = input("Please enter your desired city within the United States: ")
 
-location.lower()
+location = input("Please enter your desired city within the United States (city): ").lower()
+print()
+
+
+fn.airports(location)
+print()
+fn.top100cities(location)
+print()
 
 
 

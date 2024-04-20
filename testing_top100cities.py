@@ -47,13 +47,3 @@ if(inTop100):
     if(stateCapital[location] == True): print(city + " is the state capital in " + state[location].title() + ".")
     if(federalCapital[location] == True): print(city + " is the federal capital.")
     
-    
-
-
-
-
-
-
-
-
-
