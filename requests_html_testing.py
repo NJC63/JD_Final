@@ -10,8 +10,8 @@ for span id do "span# "
 
 session = HTMLSession()
 
-city = 'oakland'
-st = 'pa'
+city = 'phoenix'
+st = 'az'
 url = f'https://www.google.com/search?q=weather+{city}+{st}'
 
 
@@ -22,7 +22,7 @@ temperature = r.html.find('span#wob_tm', first=True).text
 unit = r.html.find('div.vk_bk.wob-unit span.wob_t', first=True).text
 condition = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
 
-
+print(temperature, unit, condition)
 
 
 

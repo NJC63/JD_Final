@@ -4,15 +4,16 @@ import functions as fn
 
 
 
-location = input("Please enter your desired city within the United States (city): ").lower()
+city = input("Please enter your desired city within the United States (city): ").lower()
 print()
 
-st, state, county, zip = fn.cities(location)
+st, state, county, zip = fn.cities(city)
 print()
-fn.top100cities(location)
+fn.top100cities(city)
 print()
-fn.airports(location)
+fn.airports(city)
 print()
+fn.weather(city, st)
 
 
 
