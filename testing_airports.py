@@ -7,27 +7,34 @@ df["CITY"] = df["CITY"].str.lower()
 df["STATE"] = df["STATE"].str.lower()
 df["COUNTRY"] = df["COUNTRY"].str.lower()
 
-city = input("Please enter your city:").lower()
-
-row_for_city = df[df["CITY"] == city]
-
-airport = row_for_city["AIRPORT"]
-iata = row_for_city["IATA"]
+# city = input("Please enter your city:").lower()
+city = "cleveland"
+st = "oh"
 
 
 
-val = df["CITY"] == city
 inAirports = False
 location = -1
 i = 1
+
+val = df["CITY"] == city
+valSt = df["STATE"] == st
 while (i <= 340):
-    if(val[i] == True):
+    if((val[i] == True) & (valSt[i] == True)):
         inAirports = True
         location = i
-    i = i + 1
+    i += 1
+
+if(inAirports == False):
+    exit()
 
 
-if(inAirports):
+row = df.iloc[[location]]
 
-    print("The main airport for " + city.title() + " is " + str(airport[location]) + " Airport.")
-    print("The IATA code for " + str(airport[location]) + " is " + str(iata[location]) + ".")
+
+airport = str((row["AIRPORT"])[location])
+iata = str((row["IATA"])[location])
+
+
+print("The main airport for " + city.title() + " is " + airport + " Airport.")
+print("The IATA code for " + airport + " is " + iata + ".")
