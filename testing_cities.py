@@ -8,31 +8,28 @@ df["st"] = df["st"].str.lower()
 df["state"] = df["state"].str.lower()
 
 
-city = input("Please enter your city:").lower()
+# city = input("City: ").lower()
+# state = input("State: ").lower()
+city = "cleveland"
+state = "ohio"
 
 row_for_city = df[df["city"] == city]
-
-st = row_for_city["st"]
-state = row_for_city["state"]
-county = row_for_city["county"]
-zip = row_for_city["zip"]
+states = row_for_city["state"].tolist()
 
 
-val = df["city"] == city
-inCities = False
-location = -1
-i = 1
-
-
-while (i <= 19501):
-    if(val[i] == True):
-        inCities = True
-        location = i
+i = 0
+while(i < len(states)):
+    if(states[i] == state):
+        row = row_for_city.iloc[[i]]
     i += 1
 
+st = row["st"]
+county = row["county"]
+zip = row["zip"]
+index = (row.index)[0]
 
 
-if(inCities):
-    print(city.title() + " is in the state " + str(state[location]).title() + " with initials " + str(st[location]).upper() + ".")
-    print("County for " + city.title() + " is " + str(county[location]).title() + " County .")
-    print("Zip for " + city.title() + " is " + str(zip[location]) + ".")
+
+print(city.title() + " is in the state " + state.title() + " with initials " + str(st[index]).upper() + ".")
+print("County for " + city.title() + " is " + str(county[index]).title() + " County .")
+print("Zip for " + city.title() + " is " + str(zip[index]) + ".")
