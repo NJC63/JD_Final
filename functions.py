@@ -2,46 +2,55 @@ import pandas as pd
 from requests_html import HTMLSession
 
 
-def cities(city):
+def cities(city, state):
     df = pd.read_csv("cities.csv")
 
     df["city"] = df["city"].str.lower()
     df["st"] = df["st"].str.lower()
     df["state"] = df["state"].str.lower()
 
-    row_for_city = df[df["city"] == city]
-
-    st_index = row_for_city["st"]
-    state_index = row_for_city["state"]
-    county_index = row_for_city["county"]
-    zip_index = row_for_city["zip"]
 
     val = df["city"] == city
+
     inCities = False
     location = -1
     i = 1
 
-    while (i <= 19501):
-        if(val[i] == True):
-            inCities = True
-            location = i
-        i += 1
-    
+    if(len(state) == 2):
+        valSt = df["st"] == state
+        while (i <= 19501):
+            if((val[i] == True) & (valSt[i] == True)):
+                inCities = True
+                location = i
+            i += 1
 
-    st = str(st_index[location]).upper()
-    state = str(state_index[location]).title()
-    county = str(county_index[location]).title()
-    zip = str(zip_index[location])
-
-    if(inCities):
-        print(city.title() + " is in the state " + state + " with initials " + st + ".")
-        print("County for " + city.title() + " is " + county + " County .")
-        print("Zip for " + city.title() + " is " + zip + ".")
     else:
-        print("Your city could not be found.")
+        valState = df["state"] == state
+        while (i <= 19501):
+            if((val[i] == True) & (valState[i] == True)):
+                inCities = True
+                location = i
+            i += 1
+
+
+    if(inCities == False):
+        print("Your city and state do not appear to be in the US database.")
+        exit()
+
+    row = df.iloc[[location]]
+
+    st = str((row["st"])[location])
+    state = str((row["state"])[location])
+    county = str((row["county"])[location])
+    zip = str((row["zip"])[location])
     
 
-    return st.lower(), state.lower(), county.lower(), zip.lower()
+    print(city.title() + " is in the state " + state.title() + " with initials " + st.upper() + ".")
+    print("County for " + city.title() + " is " + county.title() + " County .")
+    print("Zip for " + city.title() + " is " + zip + ".")
+        
+
+    return st, state, county, zip, location
 
 
 
