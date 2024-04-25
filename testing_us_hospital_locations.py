@@ -9,53 +9,50 @@ df["STATE"] = df["STATE"].str.lower()
 df["TYPE"] = df["TYPE"].str.lower()
 df["STATUS"] = df["STATUS"].str.lower()
 df["COUNTY"] = df["COUNTY"].str.lower()
+df["WEBSITE"] = df["WEBSITE"].str.lower()
 
-city = input("City: ")
-row_for_city = df[df["city"] == city]
+city = "hot springs"
+st = "ar"
 
-val = df["city"] == city
+
+val = df["CITY"] == city
+valSt = df["STATE"] == st
 inHospitals = False
-location = -1
-i = 1
+locations = []
+i = 0
 
-while (i <= 7597):
-    if(val[i] == True):
+while (i < 7596):
+    if((val[i] == True) & (valSt[i] == True)):
         inHospitals = True
-        location = i
+        locations.append(i)
     i += 1
 
-if(inHospitals):
+if(inHospitals == False):
+    exit()
 
-    name_index = row_for_city["NAME"]
-    address_index = row_for_city["ADDRESS"]
-    city_index = row_for_city["CITY"]
-    state_index = row_for_city["STATE"]
-    zip_index = row_for_city["ZIP"]
-    telephone_index = row_for_city["TELEPHONE"]
-    type_index = row_for_city["TYPE"]
-    status_index = row_for_city["STATUS"]
-    county_index = row_for_city["COUNTY"]
-    cfips_index = row_for_city["COUNTYFIPS"]
-    website_index = row_for_city["WEBSITE"]
+print(locations)
+rows = []
+
+j = 0
+while (j < len(locations)):
+    rows.append(df.iloc[[locations[j]]])
+    j += 1
 
 
-
-    name = str(name_index[location])
-    address = str(address_index[location])
-    city = str(city_index[location])
-    state = str(state_index[location])
-    zip = str(zip_index[location])
-    telephone = str(telephone_index[location])
-    type = str(type_index[location])
-    status = str(status_index[location])
-    county = str(county_index[location])
-    cfips = str(cfips_index[location])
-    website = str(website_index[location])
-
-    
+print(rows)
 
 
-
+# name = str((row["NAME"])[location])
+# address = str((row["ADDRESS"])[location])
+# city = str((row["CITY"])[location])
+# state = str((row["STATE"])[location])
+# zip = str((row["ZIP"])[location])
+# telephone = str((row["TELEPHONE"])[location])
+# type = str((row["TYPE"])[location])
+# status = str((row["STATUS"])[location])
+# county = str((row["COUNTY"])[location])
+# cfips = str((row["COUNTYFIPS"])[location])
+# website = str((row["WEBSITE"])[location])
 
 
 
