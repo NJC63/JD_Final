@@ -11,8 +11,8 @@ df["STATUS"] = df["STATUS"].str.lower()
 df["COUNTY"] = df["COUNTY"].str.lower()
 df["WEBSITE"] = df["WEBSITE"].str.lower()
 
-city = "hot springs"
-st = "ar"
+city = "los angeles"
+st = "ca"
 
 
 val = df["CITY"] == city
@@ -39,20 +39,38 @@ while (j < len(locations)):
     j += 1
 
 
-print(rows)
 
+p = 0
+names, addresses, zips ,telephones, types, counties, cfips, websites = [], [], [], [], [], [], [], []
 
-# name = str((row["NAME"])[location])
-# address = str((row["ADDRESS"])[location])
-# city = str((row["CITY"])[location])
-# state = str((row["STATE"])[location])
-# zip = str((row["ZIP"])[location])
-# telephone = str((row["TELEPHONE"])[location])
-# type = str((row["TYPE"])[location])
-# status = str((row["STATUS"])[location])
-# county = str((row["COUNTY"])[location])
-# cfips = str((row["COUNTYFIPS"])[location])
-# website = str((row["WEBSITE"])[location])
+while(p < len(locations)):
+    if(str(((rows[p])["STATUS"])[locations[p]]) == "open"):
+        names.append(str(((rows[p])["NAME"])[locations[p]]))
+        addresses.append(str(((rows[p])["ADDRESS"])[locations[p]]))
+        zips.append(str(((rows[p])["ZIP"])[locations[p]]))
+        telephones.append(str(((rows[p])["TELEPHONE"])[locations[p]]))
+        types.append(str(((rows[p])["TYPE"])[locations[p]]))
+        counties.append(str(((rows[p])["COUNTY"])[locations[p]]))
+        cfips.append(str(((rows[p])["COUNTYFIPS"])[locations[p]]))
+        websites.append(str(((rows[p])["WEBSITE"])[locations[p]]))
+    p += 1
+
+        
+
+print(f"In {city.title()} there are {len(names)} open hospitals.")
+
+print(telephones)
+
+q = 0
+while(q < len(names)):
+    print(f"{names[q].title()} is located at {addresses[q].title()} {city.title()} {st.upper()} {zips[q]}.")
+
+    if(telephones[q] != 'NOT AVAILABLE'):
+        print(telephones[q])
+
+    q += 1
+    
+
 
 
 
