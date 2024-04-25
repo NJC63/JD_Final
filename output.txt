@@ -1,2 +1,79 @@
-Hello
-Test1Test2
+BASIC INFO:
+
+Cleveland is in the state Ohio with initials OH
+
+
+POPULARITY:
+
+Your city is in the top 100 most populous cities within the United States.
+According to the 2020 census Cleveland has 372624 people.
+Cleveland is ranked as the number 13010 most populous city within the U.S.
+
+
+
+AIRPORT:
+
+The main airport for Cleveland is Cleveland-Hopkins Intl Airport.
+The IATA code for Cleveland-Hopkins Intl is CLE.
+
+
+
+WEATHER:
+
+Current weather conditions in Cleveland OH are: 47 F and Mostly sunny 
+Precipitation: 0% 
+Humidity: 53% 
+Wind: 19 mph
+
+The forecast for the next 8 days is:
+
+Thu   49/41 F    Clear
+Fri   68/60 F    Mostly Sunny
+Sat   76/66 F    Scattered Showers
+Sun   75/66 F    Scattered Thunderstorms
+Mon   78/63 F    Partly Cloudy
+Tue   67/60 F    Rain
+Wed   72/59 F    Partly Cloudy
+Thu   66/52 F    Showers
+
+
+HOSPITALS:
+
+In Cleveland there are 12 open hospitals.
+
+Grace Hospital At Fairview is located at 18101 Lorain Avenue Cleveland OH 44111.
+Telephone number: (216) 456-3880
+Website: http://www.gracehospital.org/
+University Hospitals Of Cleveland is located at 11100 Euclid Avenue Cleveland OH 44106.
+Telephone number: (216) 844-1000
+Website: http://www.uhhospitals.org/cleveland
+Cleveland Clinic is located at 9500 Euclid Avenue Cleveland OH 44195.
+Telephone number: (216) 444-2200
+Website: http://www.clevelandclinic.org
+Louis Stokes Cleveland Veterans Affairs Medical Center is located at 10701 East Blvd Cleveland OH 44106.
+Telephone number: (216) 791-3800
+Website: http://www.cleveland.va.gov/
+Rainbow Babies And Childrens Hospital is located at 11100 Euclid Avenue Cleveland OH 44106.
+Telephone number: (216) 844-1000
+Website: http://www.uhhospitals.org/rainbow
+Lutheran Hospital is located at 1730 West 25Th Street Cleveland OH 44113.
+Telephone number: (216) 696-4300
+Website: http://www.lutheranhospital.org
+Cleveland Clinic Children'S Hospital For Rehab is located at 2801 Martin Luther King, Jr Drive Cleveland OH 44104.
+Telephone number: (216) 448-6440
+Website: http://my.clevelandclinic.org/childrens-hospital/specialties-services/therapy-rehab
+Select Specialty Hospital - Cleveland Gateway is located at 2351 East 22Nd Street, 7Th Floor Cleveland OH 44155.
+Telephone number: (216) 592-2858
+Website: http://clevelandgateway.selectspecialtyhospitals.com/
+Select Specialty Hospital - Cleveland Fairhill is located at 11900 Fairhill Road Cleveland OH 44120.
+Telephone number: (216) 231-2094
+Website: http://clevelandfairhill.selectspecialtyhospitals.com/
+Metro Health Medical Center is located at 2500 Metrohealth Drive Cleveland OH 44109.
+Telephone number: (216) 778-7800
+Website: http://www.metrohealth.org
+Fairview Hospital is located at 18101 Lorain Avenue Cleveland OH 44111.
+Telephone number: (216) 476-4811
+Website: http://www.fairviewhospital.org
+St Vincent Charity Medical Center is located at 2351 East 22Nd Street Cleveland OH 44115.
+Telephone number: (216) 861-6200
+Website: https://www.stvincentcharity.com/

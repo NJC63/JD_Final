@@ -1,7 +1,11 @@
+# Pandas is used for general data management
 import pandas as pd
+
+# requests_html is used for webscraping weather data from the internet
 from requests_html import HTMLSession
 
 
+# cities
 def cities(city, state):
     df = pd.read_csv("cities.csv")
 
@@ -43,8 +47,6 @@ def cities(city, state):
     county = str((row["county"])[location])
     zip = str((row["zip"])[location])
     
-    print()
-    print(city.title() + " is in the state " + state.title() + " with initials " + st.upper() + ".")
     # print("County for " + city.title() + " is " + county.title() + " County .")
     # print("Zip for " + city.title() + " is " + zip + ".")
         
@@ -53,7 +55,7 @@ def cities(city, state):
 
 
 
-
+# top100cities
 def top100cities(city, state):
 
     df = pd.read_csv("top100cities.csv")
@@ -74,7 +76,7 @@ def top100cities(city, state):
         i += 1
 
     if(inTop100 == False):
-        return
+        return 0, 0, 0, 0
 
 
     row = df.iloc[[location]]
@@ -85,20 +87,9 @@ def top100cities(city, state):
     stateCapital = str((row["state_capital"])[location])
     federalCapital = str((row["federal_capital"])[location])
 
-    city = city.title()
+    return population, largestCityInState, stateCapital, federalCapital
 
-    print("Your city is in the top 100 most populous cities within the United States.")
-    print("According to the 2020 census " + city + " has " + population + " people.")
-
-    print(city + " is ranked as the number " + str(location + 1) + " most populous city within the U.S.")
-
-    if(largestCityInState == True): print(city + " is the largest city within " + state.title() + ".")
-    if(stateCapital == True): print(city + " is the state capital in " + state.title() + ".")
-    if(federalCapital == True): print(city + " is the federal capital.")
-
-    print()
-
-
+# airports
 def airports(city, st):
     df = pd.read_csv("airports.csv")
 
@@ -119,18 +110,16 @@ def airports(city, st):
         i += 1
 
     if(inAirports == False):
-        return
+        return 0, 0
 
     row = df.iloc[[location]]
 
     airport = str((row["AIRPORT"])[location])
     iata = str((row["IATA"])[location])
 
-    print("The main airport for " + city.title() + " is " + airport + " Airport.")
-    print("The IATA code for " + airport + " is " + iata + ".")
-    print()
+    return airport, iata
 
-
+# weather
 def weather(city, st):
 
     session = HTMLSession()
@@ -139,9 +128,9 @@ def weather(city, st):
 
     r = session.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'})
 
-    temperature = r.html.find('span#wob_tm', first=True).text
+    currentTemp = r.html.find('span#wob_tm', first=True).text
     unit = r.html.find('div.vk_bk.wob-unit span.wob_t', first=True).text
-    condition = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
+    currentCondition = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
 
     precipitation = r.html.find('div.wtsRwe', first=True).find('span#wob_pp', first=True).text
     humidity = r.html.find('div.wtsRwe', first=True).find('span#wob_hm', first=True).text
@@ -168,17 +157,12 @@ def weather(city, st):
         i += 1
 
 
-
-
-    print(f"The current weather conditions in {city.title()} are {temperature} {unit} and {condition}.")
-    print()
+    return currentTemp, unit, currentCondition, precipitation, humidity, wind, daysOfWeek, highTemps, lowTemps, conditions
 
 
 
 
-
-
-
+# us_hospitals
 def us_hospitals(city, st):
     df = pd.read_csv("us_hospital_locations.csv")
 
@@ -204,7 +188,7 @@ def us_hospitals(city, st):
         i += 1
 
     if(inHospitals == False):
-        return
+        return 0, 0, 0, 0, 0, 0, 0, 0
 
     rows = []
 
@@ -228,59 +212,14 @@ def us_hospitals(city, st):
             cfips.append(str(((rows[p])["COUNTYFIPS"])[locations[p]]))
             websites.append(str(((rows[p])["WEBSITE"])[locations[p]]))
         p += 1
-
-            
-
-    print(f"In {city.title()} there are {len(names)} open hospitals.")
-
-    q = 0
-    while(q < len(names)):
-        print(f"{names[q].title()} is located at {addresses[q].title()} {city.title()} {st.upper()} {zips[q]}.")
-
-        if(telephones[q] != 'NOT AVAILABLE'):
-            print(f"Telephone number: {telephones[q]}")
-        if(websites[q] != 'NOT AVAILABLE'):
-            print(f"Website: {websites[q]}")
-
-        q += 1
-    print()
+    
+    return names, addresses, zips, telephones, types, counties, cfips, websites
 
 
 
 def txtOutput(output, strings):
-
     for i in strings:
         output.write(i)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        output.write("\n")
 
 
