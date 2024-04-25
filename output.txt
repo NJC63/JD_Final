@@ -1,79 +1,124 @@
 BASIC INFO:
 
-Cleveland is in the state Ohio with initials OH
+Pittsburgh is in the state Pennsylvania with initials PA
 
 
 POPULARITY:
 
 Your city is in the top 100 most populous cities within the United States.
-According to the 2020 census Cleveland has 372624 people.
-Cleveland is ranked as the number 13010 most populous city within the U.S.
+According to the 2020 census Pittsburgh has 302971 people.
+Pittsburgh is ranked as the number 68 most populous city within the U.S.
 
 
 
 AIRPORT:
 
-The main airport for Cleveland is Cleveland-Hopkins Intl Airport.
-The IATA code for Cleveland-Hopkins Intl is CLE.
+The main airport for Pittsburgh is Pittsburgh International Airport.
+The IATA code for Pittsburgh International is PIT.
 
 
 
 WEATHER:
 
-Current weather conditions in Cleveland OH are: 47 F and Mostly sunny 
-Precipitation: 0% 
-Humidity: 53% 
-Wind: 19 mph
+Current weather conditions in Pittsburgh PA are:
+57 °F and Sunny 
+Precipitation: 1% 
+Humidity: 44% 
+Wind: 6 mph
 
 The forecast for the next 8 days is:
 
-Thu   49/41 F    Clear
-Fri   68/60 F    Mostly Sunny
-Sat   76/66 F    Scattered Showers
-Sun   75/66 F    Scattered Thunderstorms
-Mon   78/63 F    Partly Cloudy
-Tue   67/60 F    Rain
-Wed   72/59 F    Partly Cloudy
-Thu   66/52 F    Showers
+   Thu   59/42 °F    Clear With Periodic Clouds
+   Fri   69/53 °F    Partly Cloudy
+   Sat   74/61 °F    Rain
+   Sun   83/61 °F    Partly Cloudy
+   Mon   86/65 °F    Partly Cloudy
+   Tue   73/58 °F    Thunderstorm
+   Wed   80/59 °F    Scattered Showers
+   Thu   74/52 °F    Isolated Thunderstorms
 
 
 HOSPITALS:
 
-In Cleveland there are 12 open hospitals.
+In Pittsburgh there are 20 open hospitals.
 
-Grace Hospital At Fairview is located at 18101 Lorain Avenue Cleveland OH 44111.
-Telephone number: (216) 456-3880
-Website: http://www.gracehospital.org/
-University Hospitals Of Cleveland is located at 11100 Euclid Avenue Cleveland OH 44106.
-Telephone number: (216) 844-1000
-Website: http://www.uhhospitals.org/cleveland
-Cleveland Clinic is located at 9500 Euclid Avenue Cleveland OH 44195.
-Telephone number: (216) 444-2200
-Website: http://www.clevelandclinic.org
-Louis Stokes Cleveland Veterans Affairs Medical Center is located at 10701 East Blvd Cleveland OH 44106.
-Telephone number: (216) 791-3800
-Website: http://www.cleveland.va.gov/
-Rainbow Babies And Childrens Hospital is located at 11100 Euclid Avenue Cleveland OH 44106.
-Telephone number: (216) 844-1000
-Website: http://www.uhhospitals.org/rainbow
-Lutheran Hospital is located at 1730 West 25Th Street Cleveland OH 44113.
-Telephone number: (216) 696-4300
-Website: http://www.lutheranhospital.org
-Cleveland Clinic Children'S Hospital For Rehab is located at 2801 Martin Luther King, Jr Drive Cleveland OH 44104.
-Telephone number: (216) 448-6440
-Website: http://my.clevelandclinic.org/childrens-hospital/specialties-services/therapy-rehab
-Select Specialty Hospital - Cleveland Gateway is located at 2351 East 22Nd Street, 7Th Floor Cleveland OH 44155.
-Telephone number: (216) 592-2858
-Website: http://clevelandgateway.selectspecialtyhospitals.com/
-Select Specialty Hospital - Cleveland Fairhill is located at 11900 Fairhill Road Cleveland OH 44120.
-Telephone number: (216) 231-2094
-Website: http://clevelandfairhill.selectspecialtyhospitals.com/
-Metro Health Medical Center is located at 2500 Metrohealth Drive Cleveland OH 44109.
-Telephone number: (216) 778-7800
-Website: http://www.metrohealth.org
-Fairview Hospital is located at 18101 Lorain Avenue Cleveland OH 44111.
-Telephone number: (216) 476-4811
-Website: http://www.fairviewhospital.org
-St Vincent Charity Medical Center is located at 2351 East 22Nd Street Cleveland OH 44115.
-Telephone number: (216) 861-6200
-Website: https://www.stvincentcharity.com/
+Va Medical Center - H.J. Heinz Campus is located at 1010 Delafield Rd Pittsburgh PA 15215.
+   Telephone number: (866) 482-7488
+   Website: http://www.pittsburgh.va.gov/
+
+Lifecare Behavioral Health Hospital is located at 225 Penn Avenue Pittsburgh PA 15221.
+   Telephone number: (412) 247-2000
+   Website: http://www.lifecare-hospitals.com/hospital/pittsburgh
+
+Children'S Institute Of Pittsburgh, The is located at 6301 Northumberland Street Pittsburgh PA 15217.
+   Telephone number: (412) 420-2400
+   Website: http://www.amazingkids.org
+
+Childrens Home Of Pittsburgh is located at 5324 Penn Avenue Pittsburgh PA 15224.
+   Telephone number: (412) 441-4884
+   Website: http://www.childrenshomepgh.org
+
+Upmc Passavant is located at 9100 Babcock Boulevard Pittsburgh PA 15237.
+   Telephone number: (412) 748-6800
+   Website: http://www.upmc.edu/passavant
+
+St Clair Memorial Hospital is located at 1000 Bower Hill Road Pittsburgh PA 15243.
+   Telephone number: (412) 942-6209
+   Website: http://www.stclair.org
+
+Encompass Health Harmarville Rehabilitation Hospital is located at Guys Run Road, Po Box 11460 Pittsburgh PA 15238.
+   Telephone number: (412) 828-1300
+   Website: http://www.healthsouthharmarville.com
+
+Select Specialty Hospital Pittsbrgh Upmc is located at 200 Lothrop Street Pittsburgh PA 15213.
+   Telephone number: (412) 586-9819
+   Website: http://pittsburghupmc.selectspecialtyhospitals.com/
+
+Southwood Psychiatric Hospital is located at 2575 Boyce Plaza Road Pittsburgh PA 15241.
+   Telephone number: (412) 257-2290
+   Website: http://www.southwoodhospital.com
+
+Western Pennsylvania Hospital is located at 4800 Friendship Avenue Pittsburgh PA 15224.
+   Telephone number: (412) 578-5000
+   Website: http://www.wpahs.org/locations/west-penn-hospital
+
+Upmc Shadyside-Er is located at 5230 Centre Ave Pittsburgh PA 15232.
+   Telephone number: (412) 623-2121
+   Website: http://www.upmc.com/locations/hospitals/shadyside/pages/default.aspx
+
+Upmc Mercy is located at 1400 Locust Street Pittsburgh PA 15219.
+   Telephone number: (412) 232-7143
+   Website: http://www.upmc.com/locations/hospitals/mercy/pages/default.aspx
+
+Upmc Presbyterian is located at 200 Lothrop Street Pittsburgh PA 15213.
+   Telephone number: (412) 647-5286
+   Website: http://www.upmc.com/locations/hospitals/presbyterian/pages/default.aspx
+
+Upmc St Margaret is located at 815 Freeport Road Pittsburgh PA 15215.
+   Telephone number: (412) 784-4000
+   Website: http://www.upmc.com/locations/hospitals/st-margaret/pages/default.aspx
+
+Childrens Hospital Of Pittsburgh is located at One Childrens Hospital Dr 4401 Penn Ave Pittsburgh PA 15224.
+   Telephone number: (412) 692-5325
+   Website: http://www.chp.edu/chp/home
+
+Allegheny General Hospital is located at 320 East North Avenue Pittsburgh PA 15212.
+   Telephone number: (412) 359-3131
+   Website: http://www.wpahs.org/locations/allegheny-general-hospital
+
+Jefferson Regional Medical Center is located at 565 Coal Valley Road, P O Box 18119 Pittsburgh PA 15236.
+   Telephone number: (412) 469-5000
+   Website: http://www.jeffersonregional.com
+
+Va Medical Center - University Drive Campus is located at University Dr, C Pittsburgh PA 15240.
+   Telephone number: (412) 822-2222
+   Website: http://www.pittsburgh.va.gov/
+
+Lifecare Hospitals Of Pittsburgh - Suburban is located at 100 South Jackson Avenue Pittsburgh PA 15202.
+   Telephone number: (412) 247-2357
+   Website: http://www.lifecare-hospitals.com/hospital/pittsburgh
+
+Upmc Magee-Womens Hospital is located at 300 Halket Street Pittsburgh PA 15213.
+   Telephone number: (412) 641-4010
+   Website: http://www.upmc.com/locations/hospitals/magee/pages/default.aspx
+

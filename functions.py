@@ -87,7 +87,7 @@ def top100cities(city, state):
     stateCapital = str((row["state_capital"])[location])
     federalCapital = str((row["federal_capital"])[location])
 
-    return population, largestCityInState, stateCapital, federalCapital
+    return population, largestCityInState, stateCapital, federalCapital, location
 
 # airports
 def airports(city, st):
