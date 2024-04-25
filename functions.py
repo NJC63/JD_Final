@@ -143,8 +143,37 @@ def weather(city, st):
     unit = r.html.find('div.vk_bk.wob-unit span.wob_t', first=True).text
     condition = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
 
+    precipitation = r.html.find('div.wtsRwe', first=True).find('span#wob_pp', first=True).text
+    humidity = r.html.find('div.wtsRwe', first=True).find('span#wob_hm', first=True).text
+    wind = r.html.find('div.wtsRwe', first=True).find('span#wob_ws', first=True).text
+
+
+    forecast = r.html.find('div.wob_dfc', first=True).find('div.wob_df')
+    daysOfWeek, highTemps, lowTemps, conditions = [], [], [], []
+
+    i = 0
+    while(i < len(forecast)):
+        day = forecast[i].find('div.Z1VzSb', first=True)
+        daysOfWeek.append(day.text)
+
+        high = forecast[i].find('div.gNCp2e span.wob_t', first=True)
+        highTemps.append(high.text)
+
+        low = forecast[i].find('div.QrNVmd.ZXCv8e span.wob_t', first=True)
+        lowTemps.append(low.text)
+
+        condition = forecast[i].find('img.YQ4gaf.zr758c', first=True)
+        conditions.append(condition.attrs['alt'])
+
+        i += 1
+
+
+
+
     print(f"The current weather conditions in {city.title()} are {temperature} {unit} and {condition}.")
     print()
+
+
 
 
 
@@ -229,46 +258,29 @@ def txtOutput(output, strings):
 
 
 
-# ------------------ Potentially useful ------------------ #
 
 
 
-# attempt to split the zips and organize correctly
-def zipsInOrder(zip):
-    zip = str(zip)
-    original_list = zip.rsplit("-")
-    print(original_list)
-    initial = original_list[0][0]
-    final = original_list[0][1]
-
-    count = initial
-    i = 1
-    final_list = [initial, final]
-    while(count < final):
-        count = str(int(count) + 1)
-        final_list.insert(i, count)
-        return final_list
-    return zip
-    
-
-def binarySearch(sorted_list, target):
-    min = 0
-    max = len(sorted_list) - 1
-
-    while(min <= max):
-        midpt = (min + max)//2
-
-        if(sorted_list[midpt] == target):
-            return midpt
-        elif(sorted_list[midpt] > target):
-            max = midpt - 1
-        elif(sorted_list[midpt] < target):
-            min = midpt + 1
-    return -1   
-
-def clean(raw_df):
-
-    column_names = raw_df.columns.values.tolist()
 
 
-    return 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

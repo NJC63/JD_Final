@@ -38,12 +38,3 @@ inputFile.close()
 outputFile.close()
 
 
-''' 
-
-zip code
-longitude and latitude
-county name
-city
-state
-
-'''
