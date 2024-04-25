@@ -34,8 +34,7 @@ def cities(city, state):
 
 
     if(inCities == False):
-        print("This location does not appear to be in the US database.")
-        exit()
+        return 0, 0, 0, 0, 0
 
     row = df.iloc[[location]]
 
@@ -44,7 +43,7 @@ def cities(city, state):
     county = str((row["county"])[location])
     zip = str((row["zip"])[location])
     
-
+    print()
     print(city.title() + " is in the state " + state.title() + " with initials " + st.upper() + ".")
     # print("County for " + city.title() + " is " + county.title() + " County .")
     # print("Zip for " + city.title() + " is " + zip + ".")
@@ -219,8 +218,10 @@ def us_hospitals(city, st):
 
 
 
+def txtOutput(output, strings):
 
-
+    for i in strings:
+        output.write(i)
 
 
 
