@@ -15,7 +15,7 @@ print()
 fn.top100cities(city, state)
 fn.airports(city, st)
 fn.weather(city, st)
-print()
+fn.us_hospitals(city, st)
 
 
 

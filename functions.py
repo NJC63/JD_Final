@@ -46,8 +46,8 @@ def cities(city, state):
     
 
     print(city.title() + " is in the state " + state.title() + " with initials " + st.upper() + ".")
-    print("County for " + city.title() + " is " + county.title() + " County .")
-    print("Zip for " + city.title() + " is " + zip + ".")
+    # print("County for " + city.title() + " is " + county.title() + " County .")
+    # print("Zip for " + city.title() + " is " + zip + ".")
         
 
     return st, state, county, zip, location
@@ -145,12 +145,77 @@ def weather(city, st):
     condition = r.html.find('div.VQF4g', first=True).find('span#wob_dc', first=True).text
 
     print(f"The current weather conditions in {city.title()} are {temperature} {unit} and {condition}.")
+    print()
 
 
 
 
 
+def us_hospitals(city, st):
+    df = pd.read_csv("us_hospital_locations.csv")
 
+    df["NAME"] = df["NAME"].str.lower()
+    df["ADDRESS"] = df["ADDRESS"].str.lower()
+    df["CITY"] = df["CITY"].str.lower()
+    df["STATE"] = df["STATE"].str.lower()
+    df["TYPE"] = df["TYPE"].str.lower()
+    df["STATUS"] = df["STATUS"].str.lower()
+    df["COUNTY"] = df["COUNTY"].str.lower()
+
+
+    val = df["CITY"] == city
+    valSt = df["STATE"] == st
+    inHospitals = False
+    locations = []
+
+    i = 0
+    while (i < 7596):
+        if((val[i] == True) & (valSt[i] == True)):
+            inHospitals = True
+            locations.append(i)
+        i += 1
+
+    if(inHospitals == False):
+        return
+
+    rows = []
+
+    j = 0
+    while (j < len(locations)):
+        rows.append(df.iloc[[locations[j]]])
+        j += 1
+
+    
+    names, addresses, zips ,telephones, types, counties, cfips, websites = [], [], [], [], [], [], [], []
+
+    p = 0
+    while(p < len(locations)):
+        if(str(((rows[p])["STATUS"])[locations[p]]) == "open"):
+            names.append(str(((rows[p])["NAME"])[locations[p]]))
+            addresses.append(str(((rows[p])["ADDRESS"])[locations[p]]))
+            zips.append(str(((rows[p])["ZIP"])[locations[p]]))
+            telephones.append(str(((rows[p])["TELEPHONE"])[locations[p]]))
+            types.append(str(((rows[p])["TYPE"])[locations[p]]))
+            counties.append(str(((rows[p])["COUNTY"])[locations[p]]))
+            cfips.append(str(((rows[p])["COUNTYFIPS"])[locations[p]]))
+            websites.append(str(((rows[p])["WEBSITE"])[locations[p]]))
+        p += 1
+
+            
+
+    print(f"In {city.title()} there are {len(names)} open hospitals.")
+
+    q = 0
+    while(q < len(names)):
+        print(f"{names[q].title()} is located at {addresses[q].title()} {city.title()} {st.upper()} {zips[q]}.")
+
+        if(telephones[q] != 'NOT AVAILABLE'):
+            print(f"Telephone number: {telephones[q]}")
+        if(websites[q] != 'NOT AVAILABLE'):
+            print(f"Website: {websites[q]}")
+
+        q += 1
+    print()
 
 
 

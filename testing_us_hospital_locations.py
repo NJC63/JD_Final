@@ -9,7 +9,6 @@ df["STATE"] = df["STATE"].str.lower()
 df["TYPE"] = df["TYPE"].str.lower()
 df["STATUS"] = df["STATUS"].str.lower()
 df["COUNTY"] = df["COUNTY"].str.lower()
-df["WEBSITE"] = df["WEBSITE"].str.lower()
 
 city = "los angeles"
 st = "ca"
@@ -66,7 +65,9 @@ while(q < len(names)):
     print(f"{names[q].title()} is located at {addresses[q].title()} {city.title()} {st.upper()} {zips[q]}.")
 
     if(telephones[q] != 'NOT AVAILABLE'):
-        print(telephones[q])
+        print(f"Telephone number: {telephones[q]}")
+    if(websites[q] != 'NOT AVAILABLE'):
+        print(f"Website: {websites[q]}")
 
     q += 1
     
