@@ -1,2 +1,2 @@
-City: Pittsburgh
-State: Pennsylvania
+City: 
+State: 
