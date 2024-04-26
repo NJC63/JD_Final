@@ -32,12 +32,13 @@ currentTemp, unit, currentCondition, precipitation, humidity, wind, daysOfWeek, 
 names, addresses, zips, telephones, types, counties, cfips, websites = fn.us_hospitals(city, st)
 
 
+# strings is the list that holds strings to be printed to both the terminal and the output file
 strings = []
 
 strings.append("BASIC INFO:\n")
 strings.append(f"{city.title()} is in the state {state.title()} with initials {st.upper()}")
 
-
+# Popularity strings
 if(population != 0):
     strings.append("\n\nPOPULARITY:\n")
     strings.append("Your city is in the top 100 most populous cities within the United States.")
@@ -48,11 +49,13 @@ if(population != 0):
     if(stateCapital == True): strings.append(city + " is the state capital in " + state.title() + ".")
     if(federalCapital == True): strings.append(city + " is the federal capital.")
 
+# Airport strings
 if(airport != 0):
     strings.append("\n\nAIRPORT:\n")
     strings.append("The main airport for " + city.title() + " is " + airport + " Airport.")
     strings.append("The IATA code for " + airport + " is " + iata + ".\n")
 
+# Weather strings
 strings.append("\n\nWEATHER:")
 strings.append(f"\nCurrent weather conditions in {city.title()} {st.upper()} are:\n{currentTemp} {unit} and {currentCondition} \nPrecipitation: {precipitation} \nHumidity: {humidity} \nWind: {wind}\n")
 strings.append(f"The forecast for the next 8 days is:\n")
@@ -61,7 +64,7 @@ while(i < len(daysOfWeek)):
     strings.append(f"   {daysOfWeek[i]}   {highTemps[i]}/{lowTemps[i]} {unit}    {str(conditions[i]).title()}")
     i += 1
 
-
+# Hospital strings
 if(names != 0):
     strings.append("\n\nHOSPITALS:\n")
     strings.append(f"In {city.title()} there are {len(names)} open hospitals.\n")

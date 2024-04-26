@@ -21,9 +21,9 @@ The IATA code for Pittsburgh International is PIT.
 WEATHER:
 
 Current weather conditions in Pittsburgh PA are:
-53 °F and Clear 
+52 °F and Clear 
 Precipitation: 1% 
-Humidity: 50% 
+Humidity: 51% 
 Wind: 4 mph
 
 The forecast for the next 8 days is:
