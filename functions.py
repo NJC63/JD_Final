@@ -76,7 +76,7 @@ def top100cities(city, state):
         i += 1
 
     if(inTop100 == False):
-        return 0, 0, 0, 0
+        return 0, 0, 0, 0, 0
 
 
     row = df.iloc[[location]]
